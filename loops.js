@@ -17,3 +17,10 @@
     }
   }
   console.log(sum);
+
+// Given an array X say [1,3,5,7,9,13], write a program that would iterate through each member
+ // of the array and print each value on the screen
+  x = [1,3,5,7,9,13]
+  for(var i = 0; i< x.length; i++){
+    console.log(x[i]);
+  }
