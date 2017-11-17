@@ -46,5 +46,49 @@ console.log(arr);
 
 
 // Assignment: Removing Negatives
-// Given an array of multiple values (e.g. [0, -1, 2, -3, 4, -5, 6]), write a program that removes any negative values in that array.  Once your program is done, the array should be composed of only the non-negative numbers, in their original order.  Do this without
+// Given an array of multiple values (e.g. [0, -1, 2, -3, 4, -5, 6]), write a program that removes any negative values
+// in that array.  Once your program is done, the array should be composed of only the non-negative
+ // numbers, in their original order.  Do this without
 // creating a temporary array; only use the pop() method to remove values from the array.
+
+var arr = [-2,6,-1,7,-1,-3]
+function removeNegatives(arr) {
+  var pos = 0; //1
+  count = 0 //1
+  for (var i = 0; i < arr.length; i++){
+    if(arr[i] > 0 && pos != i ){
+      arr[pos] = arr[i]
+      pos++;
+    }else if ( arr[i] < 0){
+    	console.log(count)
+      count++
+      pos=i;
+    }
+  }
+  console.log("aRR", arr, "count", count)
+  while(count > 0){
+    arr.pop()
+    count--;
+  }
+
+  return arr
+
+}
+
+removeNegatives(arr)
+// var arr1 = [-2,6,-1,7,-1,-3]
+// //version two
+// function removeNeg(arr) {
+//   count = 0
+//   for(var i = 0; i < arr.length ; i++){
+//     if(arr[i] < 0){
+//       arr[arr.length] = arr[i]
+//       arr[i] = arr[i+1]
+//       arr.pop()
+//       count ++;
+//       i--;
+//     }
+//   }
+//   return arr
+//
+// }
