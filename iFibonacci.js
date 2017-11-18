@@ -21,3 +21,20 @@ function iFibonacci(num) {
 
 
 iFibonacci(6)
+
+//recursion metthod
+
+
+function iFibonacciRecursion(num, arr=[0, 1]) {
+  if(num < 2){
+    return arr[num]
+  }
+  if(num+ 1 == arr.length){
+    return arr[arr.length-1]
+  } else {
+    newArray = arr.push(arr[arr.length-2] + arr[arr.length-1])
+    return iFibonacciRecursion(num, newArray)
+  }
+}
+
+iFibonacciRecursion(6)
