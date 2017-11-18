@@ -23,9 +23,7 @@ function iFibonacci(num) {
 iFibonacci(6)
 
 //recursion metthod
-
-
-function iFibonacciRecursion(num, arr=[0, 1]) {
+function iFibonacciRecursion(num, arr =[0, 1]) {
   if(num < 2){
     return arr[num]
   }
@@ -38,3 +36,14 @@ function iFibonacciRecursion(num, arr=[0, 1]) {
 }
 
 iFibonacciRecursion(6)
+
+//Other Solution
+
+
+// rFibonacci(0) = 0                                  => 0
+// rFibonacci(1) = 1                                  => 1
+// rFibonacci(2) = rFibonacci(0) + rFibonacci(1)      => 1
+// rFibonacci(3) = rFibonacci(1) + rFibonacci(2)      => 2
+// rFibonacci(4) = rFibonacci(2) + rFibonacci(3)      => 3
+// rFibonacci(5) = rFibonacci(3) + rFibonacci(4)      => 5
+// rFibonacci(6) = rFibonacci(4) + rFibonacci(5)      => 8
