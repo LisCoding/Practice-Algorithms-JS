@@ -38,7 +38,19 @@ function iFibonacciRecursion(num, arr =[0, 1]) {
 iFibonacciRecursion(6)
 
 //Other Solution
+function fibs(n) {
+  if(n == 0){
+    return 0
+  }
+  if(n==1 || n == 2){
+    return 1
+  } else {
+    return fibs(n-1) + fibs(n-2)
+  }
 
+}
+
+fibs(5)
 
 // rFibonacci(0) = 0                                  => 0
 // rFibonacci(1) = 1                                  => 1
